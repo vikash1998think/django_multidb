@@ -27,5 +27,5 @@ django-cors-headers==3.14.0  # https://github.com/adamchainz/django-cors-headers
 drf-spectacular==0.26.1  # https://github.com/tfranzel/drf-spectacular
 pymongo
 mongoengine
-elasticsearch==7.17.0
+elasticsearch==8.7.0
 elasticsearch-dsl==7.4
