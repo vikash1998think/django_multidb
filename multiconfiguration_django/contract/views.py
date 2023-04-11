@@ -37,13 +37,13 @@ def create_contract(request):
     else:
         form = ContractForm()
 
-    return render(request, "contract.html", {"form": form})
+    return render(request, "contract/contract.html", {"form": form})
 
 
 def get_contract(request, pk):
     contract = Contract.objects.get(id=pk)
     contract_content = ContractDocument.objects.get(id=contract.data)
-    return render(request, "content.html", {"contract": contract, "contract_content": contract_content})
+    return render(request, "contract/content.html", {"contract": contract, "contract_content": contract_content})
 
 def search_contract(request):
     contracts = ContractIndex.search()
@@ -52,4 +52,4 @@ def search_contract(request):
             contracts = contracts.query("match", author=int(request.GET.get("author")))
         if request.GET.get("desc"):
             contracts = contracts.query("match", description=request.GET.get("desc"))
-    return render(request, "search.html", {"contracts": contracts.execute()})
+    return render(request, "contract/search.html", {"contracts": contracts.execute()})

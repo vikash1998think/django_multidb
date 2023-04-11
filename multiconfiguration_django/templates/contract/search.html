@@ -1,0 +1,6 @@
+{% extends "base.html" %}
+{% block content %}
+    {% for contract in contracts %}
+    <h1> {{contract.name}} </h1>
+    {% endfor %}
+{% endblock content %}
