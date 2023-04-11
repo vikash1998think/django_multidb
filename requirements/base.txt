@@ -28,4 +28,4 @@ drf-spectacular==0.26.1  # https://github.com/tfranzel/drf-spectacular
 pymongo
 mongoengine
 elasticsearch==7.17.0
-elasticsearch-dsl==7.4
+elasticsearch-dsl==7.4.1
